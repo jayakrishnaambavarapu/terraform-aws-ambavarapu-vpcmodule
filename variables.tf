@@ -3,5 +3,5 @@ variable "cidr" {
 }
 
 variable "region" {
-  type = string
+  
 }
