@@ -4,7 +4,7 @@ data "aws_vpc" "example" {
   }
 }
 resource "aws_subnet" "public-subnet1" {
-  vpc_id     = aws_vpc.jayakrishna-vpc.id
+  vpc_id     = data.aws_vpc.example.id
   cidr_block = var.cidr
   availability_zone = "eu-north-1a"
   map_public_ip_on_launch = true
