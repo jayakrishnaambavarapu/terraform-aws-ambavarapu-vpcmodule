@@ -1,3 +1,8 @@
+data "aws_vpc" "example" {
+  tags = {
+    name = "ambavarapu-vpc"
+  }
+}
 resource "aws_subnet" "public-subnet1" {
   vpc_id     = aws_vpc.jayakrishna-vpc.id
   cidr_block = var.cidr
@@ -7,6 +12,7 @@ resource "aws_subnet" "public-subnet1" {
   tags = {
     Name = "public-subnet1"
   }
+  depends_on = [ data.aws_vpc.example ]
   
 }
 
