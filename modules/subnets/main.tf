@@ -14,7 +14,7 @@ resource "aws_subnet" "public-subnet1" {
   tags = {
     Name = "public-subnet1"
   }
-  depends_on = [ module.ambavarapu-vpcmodule.jayakrishna-vpc-result ]
+  
 }
 
 # Specify true to indicate that instances launched into the subnet should be assigned a public IP address, default is false.
