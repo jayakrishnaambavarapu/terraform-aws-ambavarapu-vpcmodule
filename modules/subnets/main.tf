@@ -1,5 +1,5 @@
 resource "aws_subnet" "public-subnet1" {
-  vpc_id     = aws_vpc.jayakrishna-vpc.id
+  vpc_id     = var.vpc-id
   cidr_block = var.cidr
   availability_zone = "eu-north-1a"
   map_public_ip_on_launch = true
