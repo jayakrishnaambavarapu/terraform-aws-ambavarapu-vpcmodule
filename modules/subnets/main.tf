@@ -1,6 +1,8 @@
 data "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
-  owner_id = "976806633434"
+ tags = {
+  name = "ambavarapu-vpc"
+ }
+ 
 }
 
 resource "aws_subnet" "public-subnet1" {
