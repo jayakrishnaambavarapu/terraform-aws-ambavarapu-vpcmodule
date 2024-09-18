@@ -1,5 +1,6 @@
 data "aws_vpc" "example" {
   cidr_block = "10.0.0.0/16"
+  owner_id = "976806633434"
 }
 
 resource "aws_subnet" "public-subnet1" {
