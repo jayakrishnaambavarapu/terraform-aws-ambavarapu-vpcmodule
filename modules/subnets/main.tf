@@ -1,12 +1,5 @@
-data "aws_vpc" "example" {
- tags = {
-  name = "ambavarapu-vpc"
- }
- 
-}
-
 resource "aws_subnet" "public-subnet1" {
-  vpc_id     = data.aws_vpc.example.id
+  vpc_id     = aws_vpc.jayakrishna-vpc.id
   cidr_block = var.cidr
   availability_zone = "eu-north-1a"
   map_public_ip_on_launch = true
